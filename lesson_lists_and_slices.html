@@ -1,0 +1,18 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>6차시: 리스트 & 슬라이싱</title><link rel="stylesheet" href="../static/style.css"/><style>body{max-width:980px;margin:24px auto;padding:0 16px}pre{background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:12px;overflow:auto}.btn{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border-radius:8px;border:1px solid #2563eb;color:#2563eb;text-decoration:none}.btn:hover{background:#2563eb;color:#fff}.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
+/* ——— Badge styles for 마무리 문제 ——— */
+.practice li{position:relative;padding-left:76px}
+.practice li::before{content:'기초';position:absolute;left:0;top:2px;display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#ecfeff;color:#0891b2;border:1px solid #a5f3fc}
+.practice li:nth-child(2)::before{content:'표준';background:#eef2ff;color:#4338ca;border-color:#c7d2fe}
+.practice li:nth-child(3)::before{content:'도전';background:#fee2e2;color:#b91c1c;border-color:#fecaca}
+</style></head><body>
+<nav><a class="btn" href="examples.html">⬅ 예제 목록</a></nav>
+<h1 style="color:#2563eb">6차시: 리스트 & 슬라이싱</h1>
+<div class="card"><h2>예제</h2><pre><code>fruits = ["사과", "바나나", "딸기"]
+print("처음:", fruits)
+fruits.append("포도"); print("추가:", fruits)
+fruits.remove("바나나"); print("삭제:", fruits)
+print("슬라이싱[0:2]:", fruits[0:2])
+print("마지막:", fruits[-1])</code></pre></div>
+<div class="card" style="margin-top:12px"><h2>마무리 문제 (3문제)</h2><ol class="practice"><li>좋아하는 과일 5개 리스트 → 첫 3개 출력</li><li>학생 이름 리스트에 추가/삭제</li><li>점수 리스트에서 최고/최저/평균 구하기</li></ol></div>
+<p><a class="btn" href="../examples/lists_and_slices.py">코드 보기(.py)</a><a class="btn" href="/run/lists_and_slices.py">실행하기</a><a class="btn" href="lesson_input_and_cast.html">다음: 7차시 입력</a></p>
+</body></html>
