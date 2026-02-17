@@ -1,0 +1,21 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>4차시: 함수</title><link rel="stylesheet" href="../static/style.css"/><style>body{max-width:980px;margin:24px auto;padding:0 16px}pre{background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:12px;overflow:auto}.btn{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border-radius:8px;border:1px solid #2563eb;color:#2563eb;text-decoration:none}.btn:hover{background:#2563eb;color:#fff}.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
+/* ——— Badge styles for 마무리 문제 ——— */
+.practice li{position:relative;padding-left:76px}
+.practice li::before{content:'기초';position:absolute;left:0;top:2px;display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#ecfeff;color:#0891b2;border:1px solid #a5f3fc}
+.practice li:nth-child(2)::before{content:'표준';background:#eef2ff;color:#4338ca;border-color:#c7d2fe}
+.practice li:nth-child(3)::before{content:'도전';background:#fee2e2;color:#b91c1c;border-color:#fecaca}
+</style></head><body>
+<nav><a class="btn" href="examples.html">⬅ 예제 목록</a></nav>
+<h1 style="color:#2563eb">4차시: 함수 (def)</h1>
+<div class="card"><h2>핵심</h2><ul><li>정의: <code>def 이름(매개변수):</code></li><li>반환: <code>return</code></li></ul>
+<h2>예제</h2><pre><code>def add(a, b):
+    return a + b
+
+def greet(name):
+    print(f"안녕, {name}!")
+
+print("7 + 5 =", add(7, 5))
+greet("영희")</code></pre></div>
+<div class="card" style="margin-top:12px"><h2>마무리 문제 (3문제)</h2><ol class="practice"><li>세 수 평균을 반환하는 함수</li><li>정수를 받아 짝/홀을 출력하는 함수</li><li>이름을 받아 인사말을 반환하는 함수</li></ol></div>
+<p><a class="btn" href="../examples/functions.py">코드 보기(.py)</a><a class="btn" href="/run/functions.py">실행하기</a><a class="btn" href="lesson_conditionals.html">다음: 5차시 조건문</a></p>
+</body></html>
