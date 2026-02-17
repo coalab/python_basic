@@ -1,0 +1,18 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>19차시: 터틀 도형</title><link rel="stylesheet" href="../static/style.css"/><style>body{max-width:980px;margin:24px auto;padding:0 16px}pre{background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:12px;overflow:auto}.btn{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border-radius:8px;border:1px solid #2563eb;color:#2563eb;text-decoration:none}.btn:hover{background:#2563eb;color:#fff}.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
+/* ——— Badge styles for 마무리 문제 ——— */
+.practice li{position:relative;padding-left:76px}
+.practice li::before{content:'기초';position:absolute;left:0;top:2px;display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#ecfeff;color:#0891b2;border:1px solid #a5f3fc}
+.practice li:nth-child(2)::before{content:'표준';background:#eef2ff;color:#4338ca;border-color:#c7d2fe}
+.practice li:nth-child(3)::before{content:'도전';background:#fee2e2;color:#b91c1c;border-color:#fecaca}
+</style></head><body>
+<nav><a class="btn" href="examples.html">⬅ 예제 목록</a></nav>
+<h1 style="color:#2563eb">19차시: 터틀로 도형 그리기 (로컬)</h1>
+<div class="card"><h2>예제</h2><pre><code>import turtle as t
+t.speed(0); t.pensize(2)
+for _ in range(4): t.forward(100); t.right(90)
+t.penup(); t.goto(-150,0); t.pendown()
+for _ in range(5): t.forward(200); t.right(144)
+t.done()</code></pre></div>
+<div class="card" style="margin-top:12px"><h2>마무리 문제 (3문제)</h2><ol class="practice"><li>정삼각형/오각형 그리기</li><li>무지개 색으로 다각형</li><li>별 회전 패턴 애니메이션</li></ol></div>
+<p><a class="btn" href="../examples/turtle_shapes.py">코드 보기(.py)</a><a class="btn" href="/run/turtle_shapes.py">실행하기(일부 환경 미지원)</a><a class="btn" href="lesson_mini_project_word_freq.html">다음: 20차시 단어 빈도</a></p>
+</body></html>
