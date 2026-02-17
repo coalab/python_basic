@@ -32,9 +32,4 @@ Python 기초 학습을 위한 실습 저장소입니다.
 
 ---
 
-## 💻 로컬 실행 방법
 
-```bash
-git clone https://github.com/coalab/python_basic.git
-cd python_basic
-python hello.py
