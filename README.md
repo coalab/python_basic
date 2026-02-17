@@ -25,39 +25,25 @@ python-edu-site
 └── .gitignore                # Files and directories to ignore by Git
 ```
 
-## Setup Instructions
+# 🐍 Python Basic - Web Execution Guide
 
-1. **Clone the repository:**
-   ```
-   git clone <repository-url>
-   cd python-edu-site
-   ```
+이 저장소는 Python 기초 학습을 위한 예제 코드 모음입니다.  
+로컬 설치 없이 웹에서 바로 실행할 수 있습니다.
 
-2. **Install dependencies:**
-   Make sure you have Python and pip installed. Then run:
-   ```
-   pip install -r requirements.txt
-   ```
+---
 
-3. **Run the application:**
-   ```
-   python src/app.py
-   ```
-   The application will be accessible at `http://127.0.0.1:5000`.
+## 🚀 1. GitHub Codespaces에서 실행하기 (추천)
 
-## Usage Guidelines
+1. 이 저장소 상단의 `Code` 버튼 클릭
+2. `Codespaces` 선택
+3. `Create codespace on main` 클릭
+4. 웹 브라우저에서 VS Code 환경이 열립니다
+5. `.py` 파일을 열고 실행
 
-- Visit the homepage to get an introduction to the site and navigate to the examples page.
-- Explore various Python examples that are suitable for middle school students.
-- Each example includes a description and a link to the corresponding Python script.
+터미널 실행 방법:
 
-## Overview of Examples
+```bash
+python 파일명.py
 
-- **Basic Print:** Learn how to output text to the console using the print function.
-- **Variables:** Understand how to declare and use variables in Python.
-- **Loops:** Discover how to use for and while loops to iterate over data.
-- **Functions:** Explore how to define and call functions for code reusability.
-
-## Contact
 
 For any inquiries or feedback, please reach out to the project maintainers.
