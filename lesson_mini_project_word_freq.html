@@ -1,0 +1,27 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>20차시: 미니 프로젝트(단어 빈도)</title><link rel="stylesheet" href="../static/style.css"/><style>body{max-width:980px;margin:24px auto;padding:0 16px}pre{background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:12px;overflow:auto}.btn{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border-radius:8px;border:1px solid #2563eb;color:#2563eb;text-decoration:none}.btn:hover{background:#2563eb;color:#fff}.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
+/* ——— Badge styles for 마무리 문제 ——— */
+.practice li{position:relative;padding-left:76px}
+.practice li::before{content:'기초';position:absolute;left:0;top:2px;display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#ecfeff;color:#0891b2;border:1px solid #a5f3fc}
+.practice li:nth-child(2)::before{content:'표준';background:#eef2ff;color:#4338ca;border-color:#c7d2fe}
+.practice li:nth-child(3)::before{content:'도전';background:#fee2e2;color:#b91c1c;border-color:#fecaca}
+</style></head><body>
+<nav><a class="btn" href="examples.html">⬅ 예제 목록</a></nav>
+<h1 style="color:#2563eb">20차시: 단어 빈도 분석</h1>
+<div class="card"><h2>예제</h2><pre><code>text = '''
+Python is fun and powerful.
+Python lets you write clear and concise code.
+Fun with Python!
+'''
+for ch in ",.!?":
+    text = text.replace(ch, " ")
+words = [w for w in text.lower().split() if w]
+freq = {}
+for w in words:
+    freq[w] = freq.get(w, 0) + 1
+items = sorted(freq.items(), key=lambda x: (-x[1], x[0]))
+print("단어 개수:", len(words))
+for w, c in items:
+    print(f"{w}: {c}")</code></pre></div>
+<div class="card" style="margin-top:12px"><h2>마무리 문제 (3문제)</h2><ol class="practice"><li>불용어(stopwords) 제거 추가</li><li>상위 N개만 출력</li><li>파일에서 읽어 빈도 분석</li></ol></div>
+<p><a class="btn" href="../examples/mini_project_word_freq.py">코드 보기(.py)</a><a class="btn" href="/run/mini_project_word_freq.py">실행하기</a><a class="btn" href="examples.html">예제 목록으로</a></p>
+</body></html>
