@@ -1,0 +1,24 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>15차시: 미니 프로젝트(성적)</title><link rel="stylesheet" href="../static/style.css"/><style>body{max-width:980px;margin:24px auto;padding:0 16px}pre{background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:12px;overflow:auto}.btn{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border-radius:8px;border:1px solid #2563eb;color:#2563eb;text-decoration:none}.btn:hover{background:#2563eb;color:#fff}.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
+/* ——— Badge styles for 마무리 문제 ——— */
+.practice li{position:relative;padding-left:76px}
+.practice li::before{content:'기초';position:absolute;left:0;top:2px;display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#ecfeff;color:#0891b2;border:1px solid #a5f3fc}
+.practice li:nth-child(2)::before{content:'표준';background:#eef2ff;color:#4338ca;border-color:#c7d2fe}
+.practice li:nth-child(3)::before{content:'도전';background:#fee2e2;color:#b91c1c;border-color:#fecaca}
+</style></head><body>
+<nav><a class="btn" href="examples.html">⬅ 예제 목록</a></nav>
+<h1 style="color:#2563eb">15차시: 성적 계산 도우미</h1>
+<div class="card"><h2>예제</h2><pre><code>def grade_of(score):
+    if score >= 90: return "A"
+    if score >= 80: return "B"
+    if score >= 70: return "C"
+    if score >= 60: return "D"
+    return "F"
+scores = [88, 92, 73, 64, 95]
+avg = sum(scores) / len(scores)
+grades = [grade_of(s) for s in scores]
+print("점수:", scores)
+print("평균:", round(avg, 1))
+print("등급:", grades)</code></pre></div>
+<div class="card" style="margin-top:12px"><h2>마무리 문제 (3문제)</h2><ol class="practice"><li>등급 기준을 플러스로 세분화</li><li>과목명과 점수를 딕셔너리로 출력</li><li>최고/최저 과목 함께 출력</li></ol></div>
+<p><a class="btn" href="../examples/mini_project_grade_helper.py">코드 보기(.py)</a><a class="btn" href="/run/mini_project_grade_helper.py">실행하기</a><a class="btn" href="lesson_comprehensions.html">다음: 16차시 컴프리헨션</a></p>
+</body></html>
