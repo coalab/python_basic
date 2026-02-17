@@ -1,19 +1,172 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>Python Basic - COALAB</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>1차시: 기본 출력 & 변수 기초</title>
+  <link rel="stylesheet" href="../static/style.css" />
+  <style>
+    /* 페이지 전용 보조 스타일 (사이트 전체 톤과 조화) */
+    :root { --primary:#2563eb; --primary-2:#3b82f6; --ink:#0f172a; --muted:#64748b; }
+    body { color: var(--ink); }
+    .wrap{max-width:980px;margin:24px auto;padding:0 16px}
+    .breadcrumb a{color:var(--primary);text-decoration:none}
+    .breadcrumb{color:#64748b;font-size:14px;margin-bottom:12px}
+    .hero{background:linear-gradient(90deg,var(--primary-2),var(--primary));color:#fff;border-radius:14px;padding:20px 18px;margin:12px 0}
+    .hero h1{margin:0 0 6px 0;font-size:22px}
+    .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-size:12px;margin-left:6px}
+    .two-col{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:768px){.two-col{grid-template-columns:1.2fr .8fr}}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .card h2, .card h3 { margin-top:0 }
+    pre{background:#f8fafc;border:1px solid #e5e7eb;border-radius:10px;padding:12px;overflow:auto}
+    code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+    .btn{display:inline-block;margin:6px 6px 0 0;padding:8px 12px;border-radius:8px;border:1px solid var(--primary);color:var(--primary);text-decoration:none}
+    .btn:hover{background:var(--primary);color:#fff}
+    .tips{background:#f1f5f9;border:1px dashed #cbd5e1;color:#334155;border-radius:10px;padding:12px}
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;background:#fff}
+    details+details{margin-top:8px}
+    summary{cursor:pointer}
+    ol.practice{margin-left:18px}
+    .table{width:100%;border-collapse:collapse;margin-top:8px}
+    .table th,.table td{border:1px solid #e5e7eb;padding:8px;text-align:left;font-size:14px}
+    .footer-nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+  </style>
 </head>
 <body>
-    <h1>🐍 Python Basic</h1>
-    <p>Python 기초 학습 페이지입니다.</p>
+  <div class="wrap">
+    <nav class="breadcrumb">🔙 <a href="examples.html">예제로 돌아가기</a></nav>
 
-    <h3>📂 실습 파일</h3>
-    <ul>
-        <li><a href="hello.py">hello.py</a></li>
-        <li><a href="variable.py">variable.py</a></li>
-    </ul>
+    <section class="hero" role="banner" aria-label="수업 소개">
+      <h1>1차시: 기본 출력 <span class="badge">print</span> <span class="badge">변수 기초</span></h1>
+      <p style="margin:0.25rem 0 0;">print 함수로 메시지와 계산 결과를 표시하고, 간단한 변수까지 맛봅니다.</p>
+      <div class="footer-nav">
+        <a class="btn" href="../examples/basic_print.py">코드 보기(.py)</a>
+        <a class="btn" href="/run/basic_print.py">실행하기</a>
+      </div>
+    </section>
 
-    <p>© COALAB</p>
+    <section class="two-col">
+      <!-- 좌측: 개념/예제 -->
+      <div class="card">
+        <h2>핵심 개념</h2>
+        <h3>1) <code>print()</code> 기본</h3>
+        <ul>
+          <li><code>print(값, 값, ...)</code> 형태로 화면에 출력합니다.</li>
+          <li><code>sep</code>: 값 사이의 구분자(기본값 공백), <code>end</code>: 끝에 붙는 문자(기본값 줄바꿈)</li>
+        </ul>
+        <table class="table" aria-label="print 인자 설명">
+          <thead><tr><th>인자</th><th>의미</th><th>예시</th></tr></thead>
+          <tbody>
+            <tr><td><code>sep</code></td><td>여러 값을 출력할 때 사이 구분자</td><td><code>print("2025","10","04", sep="-")</code> → <code>2025-10-04</code></td></tr>
+            <tr><td><code>end</code></td><td>마지막에 붙는 문자</td><td><code>print("Hello", end=" "); print("Python")</code></td></tr>
+          </tbody>
+        </table>
+
+        <h3>2) 변수 맛보기</h3>
+        <ul>
+          <li>값을 이름에 붙여 저장합니다: <code>name = "민수"</code>, <code>age = 15</code></li>
+          <li>f-string으로 깔끔하게 출력: <code>print(f"이름: {name}, 나이: {age}")</code></li>
+        </ul>
+
+        <h2>예제 코드</h2>
+        <pre><code>print("안녕하세요! 파이썬 첫 실행입니다 😀")
+
+# 숫자/연산 출력
+print("10 + 5 =", 10 + 5)
+print("10 - 5 =", 10 - 5)
+print("10 * 5 =", 10 * 5)
+print("10 / 5 =", 10 / 5)
+
+# 줄바꿈/구분자
+print("사과", "바나나", "딸기")
+print("Hello", end=" "); print("Python")
+print("2025", "10", "04", sep="-")
+
+# 변수 & f-string
+name = "민수"
+age = 15
+print(f"이름: {name}, 나이: {age}")
+
+# 따옴표 출력
+print("그는 말했다: \\"파이썬 재밌다!\\"")
+print('It\\'s a good day to learn Python.')
+
+# 여러 줄 문자열
+print(\"\"\"여러 줄을
+한꺼번에 출력할 수 있어요.\"\"\")</code></pre>
+
+        <h2>실행 결과(예시)</h2>
+        <pre><code>안녕하세요! 파이썬 첫 실행입니다 😀
+10 + 5 = 15
+10 - 5 = 5
+10 * 5 = 50
+10 / 5 = 2.0
+사과 바나나 딸기
+Hello Python
+2025-10-04
+이름: 민수, 나이: 15
+그는 말했다: "파이썬 재밌다!"
+It's a good day to learn Python.
+여러 줄을
+한꺼번에 출력할 수 있어요.</code></pre>
+
+        <div class="tips" role="note">
+          💡 <b>디버깅 팁:</b> 예상한 값이 안 나오면 <code>print()</code>로 중간값을 찍어 확인하세요.
+        </div>
+      </div>
+
+      <!-- 우측: 퀵 레퍼런스/버튼 -->
+      <aside class="card" aria-label="퀵 레퍼런스 & 빠른 실행">
+        <h2 style="margin-top:0">퀵 레퍼런스</h2>
+        <ul>
+          <li><code>print(a, b, c, sep="-")</code></li>
+          <li><code>print("끝", end="!")</code></li>
+          <li><code>name = "Jisoo"</code></li>
+          <li><code>age = 14</code></li>
+          <li><code>print(f"이름: {name}, 나이: {age}")</code></li>
+        </ul>
+        <a class="btn" href="../examples/basic_print.py">코드 보기(.py)</a>
+        <a class="btn" href="/run/basic_print.py">실행하기</a>
+      </aside>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>연습 문제</h2>
+      <ol class="practice">
+        <li>본인의 이름과 나이를 변수에 저장하고, <code>print()</code>로 소개 문장을 출력하세요.<br>
+            예: <code>저는 OOO이고, 나이는 XX살입니다.</code></li>
+        <li><code>sep</code>과 <code>end</code>를 이용해 날짜를 <code>YYYY-MM-DD</code> 형식으로 출력하고, 줄바꿈 없이 뒤에 <code>😊</code>를 붙이세요.</li>
+        <li>f-string을 사용해 다음 문장을 출력하세요: <code>올해는 2025년, 내년은 2026년입니다.</code></li>
+      </ol>
+
+      <details>
+        <summary>정답 보기 (예시)</summary>
+        <pre><code># 1)
+name = "영희"
+age = 14
+print(f"저는 {name}이고, 나이는 {age}살입니다.")
+
+# 2)
+print("2025","10","04", sep="-", end=" 😊\\n")
+
+# 3)
+this_year = 2025
+next_year = this_year + 1
+print(f"올해는 {this_year}년, 내년은 {next_year}년입니다.")</code></pre>
+      </details>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>다음 단계</h2>
+      <p>이제 변수와 자료형을 더 깊게 배우면, 입력·조건문·반복문까지 자연스럽게 이어집니다.</p>
+      <div class="footer-nav">
+        <a class="btn" href="examples.html">예제 목록으로</a>
+        <!-- 다음 차시 설명 페이지를 만들면 아래 링크를 해당 파일로 바꿔주세요 -->
+        <a class="btn" href="../examples/variables.py">2차시 코드 보기</a>
+        <a class="btn" href="/run/variables.py">2차시 실행하기</a>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
